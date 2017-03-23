@@ -12,6 +12,7 @@
 #include <string>
 #include <fstream>
 #include "Melange.h"
+
 using namespace std;
 
 
@@ -32,7 +33,7 @@ int main()
 	// 1. On pioche un mot mystere dans notre dico
 	//----------------------------------------------------------------------------------
 
-		ifstream fichier("E:/Aziz/Documents/ConsoleApplication1/ConsoleApplication1/dico.txt");
+		ifstream fichier("dico.txt");
 
 		if (fichier) //échoue si le fichier n'est pas ouvert
 
@@ -49,6 +50,7 @@ int main()
 						(getline(fichier, ligne));
 						nbreLignes++;
 			}
+			cout << "lenombre de ligne est : " << nbreLignes << endl;
 
 			//---------------------------------------------------------------
 			// on choisi un nombre aleatoire
@@ -83,7 +85,7 @@ int main()
 	//On ajoute plusieurs saut de lignes pour empecher le joueur de voir le mot mystere
 	//----------------------------------------------------------------------------------
 
-		for (i = 0; i < 1000; i++) { cout << " " << endl; }
+		for (i = 0; i < 100; i++) { cout << " " << endl; }
 
 	//----------------------------------------------------------------------------------
 	// 2. on melange le mot mystere (fonction melange.cpp)
